@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    position: relative;
+    padding: 0 100px;
+    min-height: 100vh;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #303960;
+}
+
+.container:after {
+    content: 'Healthy';
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+    left: 0;
+    font-size: 18vw;
+    font-weight: 700;
+    color: #303960;
+    opacity: 0.09;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+header .logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #303960;
+    text-decoration: none;
+    font-size: 2em; 
+}
+
+header .logo span {
+    color: #EA9A96
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin: 0 20px;
+    font-weight: 600;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 40px 10px;
+    color: #303960;
+}
+
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a  {
+    color: #FFFFFF;
+}
+
+header ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background: #EA9A96;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+header ul li a:hover:before,
+header ul li a.active:before {
+    width: 40px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.content .bnTxt {
+    position: relative;
+    max-width: 500px;
+    margin-right: 50px;
+}
+
+.content .bnTxt h2 {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: #303960;
+}
+
+.content .bnTxt p {
+    font-size: 18px;
+    color: #303960;
+    line-height: 1.8em;
+    margin: 20px 0;
+}
+
+.content .bnTxt .button {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #303960;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.content .bnTxt .button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background: #EA9A96;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.content .bnTxt .button:hover:before {
+    width: 100%;
+}
+
+.content .bnImg {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background: #000 ;
+}
+
+.content .bnImg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+
+.icons .social,
+.icons .controls {
+    position: relative;
+    display: flex;
+}   
+
+.icons .social li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.icons .social li img {
+    display: inline-block;
+    max-height: 24px;
+    transition: 0.5s ease-in-out;
+}
+
+.icons .social li:hover img {
+    transform: translateY(-10px);
+}
+
+.icons .controls li {
+    padding: 10px 12px;
+    list-style: none;
+    margin-left: 50px;
+    cursor: pointer;
+    filter: invert(1);
+    border: 1px solid;
+    transition: 0.5s ease-in-out;
+}
+
+.icons .controls li:hover {
+    opacity: 0.5;
+}
+
+.icons .controls li img {
+    max-height: 44px;
+}
