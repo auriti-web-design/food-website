@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -16,24 +18,41 @@
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
+            <span class="menu"></span>
         </header>
         <div class="content">
-            <div class="bnTxt">
+            <div class="bnTxt" id="slideTX">
+                <div class="active">
+                    <h2>Eat Healthy<br>Stay Healthy</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vero eaque repellendus est
+                        quaerat animi saepe soluta numquam qui, minus facilis incidunt quibusdam quae praesentium at
+                        fugiat dolore ducimus laborum?</p>
+                    <a href="" class="button">Read More</a>
+                </div>
                 <div>
-                    <h2>EAT Healthy<br>Stay Healthy</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vero eaque repellendus est quaerat animi saepe soluta numquam qui, minus facilis incidunt quibusdam quae praesentium at fugiat dolore ducimus laborum?</p>
+                    <h2>Eat Youy<br>Veggies</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus necessitatibus harum enim qui
+                        fuga laudantium maxime ducimus, numquam veniam rem.</p>
+                    <a href="" class="button">Read More</a>
+                </div>
+                <div>
+                    <h2>Good Food<br>Food Website</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum dolores dolore totam molestiae
+                        praesentium accusantium sint culpa, voluptatum in atque nostrum porro veniam ad error?</p>
                     <a href="" class="button">Read More</a>
                 </div>
             </div>
-            <div class="bnImg">
-                <img src="images/food1.jpg" alt="food one">
+            <div class="bnImg" id="slideshow">
+                <img src="images/food1.jpg" alt="food one" class="active">
+                <img src="images/food2.jpg" alt="food two">
+                <img src="images/food3.jpg" alt="food three">
             </div>
         </div>
         <div class="icons">
             <ul class="social">
                 <li>
                     <a href="">
-                        <img src="images/icons/facebook.png"facebook">
+                        <img src="images/icons/facebook.png" facebook">
                     </a>
                 </li>
                 <li>
@@ -46,19 +65,13 @@
                 </li>
             </ul>
             <ul class="controls">
-                <li>
-                    <a href="">
-                        <img src="images/icons/left.png" alt="">
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="">
-                        <img src="images/icons/right.png" alt="">
-                    </a>
-                </li>
+                <li><a href="#"><img src="images/icons/left.png" alt="prevt" onclick="prSlide();prSlideTX();"></a></li>
+
+                <li><a href="#"><img src="images/icons/right.png" alt="next" onclick="nxSlide();nxSlideTX();"></a></li>
             </ul>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
+
 </html>

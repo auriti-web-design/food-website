@@ -108,6 +108,14 @@ header ul li a.active:before {
     margin-right: 50px;
 }
 
+.content .bnTxt div {
+    display: none;
+}
+
+.content .bnTxt div.active {
+    display: initial;
+}
+
 .content .bnTxt h2 {
     font-size: 60px;
     text-transform: uppercase;
@@ -164,7 +172,12 @@ header ul li a.active:before {
     height: 100%;
     object-fit: cover;
     transition: 0.5s;
+    opacity: 0;
 }
+
+.content .bnImg img.active {
+    opacity: 1;
+} 
 
 .icons {
     display: flex;
@@ -211,4 +224,90 @@ header ul li a.active:before {
 
 .icons .controls li img {
     max-height: 44px;
+}
+
+.menu {
+    display: none;
+}
+
+
+/* Responsive */
+
+@media (width: 992px) {
+    .container {
+        padding: 20px 50px;
+    }
+
+    .container:before {
+        display: none;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 1000000;
+        padding: 100px 0;
+    }
+
+    header ul li {
+        padding: 20px;
+        text-align: center;
+    }
+
+    header ul li a {
+        font-size: 36px;
+        color: #303960 !important;  
+    }
+
+    header ul li a:hover:before,
+    header ul li a.active:before {
+        width: 100%;
+    }
+
+    .menu {
+        width: 34px;
+        height: 34px;
+        display: initial;
+        position: fixed;
+        right: 50px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 100000000000;
+        background: #fff url(images/icons/menu-of-three-lines.svg);
+        background-repeat: no-repeat;
+        background-position: 6px;
+    }
+
+    .icons .controls li {
+        filter: invert(0);
+    }
+
+    .content .bnTxt {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .content .bnTxt h2 {
+        font-size: 30px;
+    }
+
+    .content {
+        margin-top: 0;
+        flex-direction: column-reverse;
+    }
+
+    .content .bnImg {
+        width: 100%;
+        height: 40vh;
+        margin: 20px 0;
+    }
 }
