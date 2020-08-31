@@ -30,3 +30,8 @@ function prSlideTX() {
     i = (i - 1 + slidesTX.length) % slidesTX.length;
     slidesTX[i].classList.add('active');
 }
+
+function menuToggle() {
+    var nav = document.getElementById('navbar');
+    nav.classList.toggle('active');
+}

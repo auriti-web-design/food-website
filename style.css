@@ -258,6 +258,11 @@ header ul li a.active:before {
         padding: 100px 0;
     }
 
+
+    header .active ul {
+        display: initial;
+    }
+
     header ul li {
         padding: 20px;
         text-align: center;
